@@ -27,9 +27,9 @@ export default class Stack<T> {
     pop(): T | undefined {
         this.length = Math.max(0, this.length - 1) ;
         if(this.length === 0) {
-            const head = this.head as Node<T>
+            const head = this.head
             this.head = undefined;
-            return head.value
+            return head?.value
         }
 
         const headToRemove = this.head as Node<T>
